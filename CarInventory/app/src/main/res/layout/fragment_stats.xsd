@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LinearLayout" type="LinearLayoutType"/>
+  <xs:complexType name="androidx.recyclerview.widget.RecyclerViewType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:id" xmlns:and="http://schemas.android.com/apk/res/android"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearLayoutType">
+    <xs:sequence>
+      <xs:element type="androidx.recyclerview.widget.RecyclerViewType" name="androidx.recyclerview.widget.RecyclerView"/>
+    </xs:sequence>
+    <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="tool:context" xmlns:tool="http://schemas.android.com/tools"/>
+    <xs:attribute ref="and:background" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:orientation" xmlns:and="http://schemas.android.com/apk/res/android"/>
+  </xs:complexType>
+</xs:schema>
